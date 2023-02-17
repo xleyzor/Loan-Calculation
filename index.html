@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Calculation </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.slim.js" integrity="sha256-DKU1CmJ8kBuEwumaLuh9Tl/6ZB6jzGOBV/5YpNE2BWc=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="form">
+                <div class="tutar">
+                    <label for="txt">Çekilecek Tutarı Seçniz</label>
+                    <input type="text" id="txt" onkeypress="return isNumberKey(event)">
+                </div>
+                <div class="vade">
+                    <label for="liste">Vadeyi Seçiniz</label>
+                    <select name="" id="liste">
+                        <option value="12">12 Ay</option>
+                        <option value="24">24 Ay</option>
+                        <option value="36">36 Ay</option>
+                        <option value="48">48 Ay</option>
+                    </select>
+                </div>
+            </div>
+            <input type="button" value="Hesapla" id="btn" onclick="krediHesap();">
+
+        </div>
+        <div class="toplam-tutar">
+            <h3>Toplam Tutar:
+                <p id="sonuc1"></p>
+            </h3>
+        </div>
+        <div class="aylik-tutar">
+            <h3>Aylık Tutar:
+                <p id="sonuc2"></p>
+            </h3>
+        </div>
+
+    </div>
+
+
+
+</body>
+
+</html>
